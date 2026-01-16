@@ -8,8 +8,8 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 
-	"github.com/skyluk/weather-api/internal/adapters/weather"
-	"github.com/skyluk/weather-api/internal/models"
+	"github.com/skyluk/forecast-api/internal/adapters/weather"
+	"github.com/skyluk/forecast-api/internal/models"
 )
 
 type ApiServer struct {

@@ -15,8 +15,8 @@ This application acts as a wrapper around the [National Weather Service API](htt
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/skyluk/weather-api.git
-cd weather-api
+git clone https://github.com/skyluk/forecast-api.git
+cd forecast-api
 ```
 
 2. Download dependencies:

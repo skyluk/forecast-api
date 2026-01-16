@@ -7,8 +7,8 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 
-	"github.com/skyluk/weather-api/internal/adapters/weather"
-	"github.com/skyluk/weather-api/internal/server"
+	"github.com/skyluk/forecast-api/internal/adapters/weather"
+	"github.com/skyluk/forecast-api/internal/server"
 )
 
 const (

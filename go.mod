@@ -1,4 +1,4 @@
-module github.com/skyluk/weather-api
+module github.com/skyluk/forecast-api
 
 go 1.25.1
 

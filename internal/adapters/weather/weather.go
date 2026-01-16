@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/skyluk/weather-api/internal/models"
+	"github.com/skyluk/forecast-api/internal/models"
 )
 
 const (
