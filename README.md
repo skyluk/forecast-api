@@ -77,4 +77,4 @@ Returns JSON-formatted weather forecast data from the National Weather Service A
 
 ## License
 
-[Add your license information here]
+This project's code is free to use for whatever purpose you see fit.
