@@ -75,6 +75,18 @@ Returns JSON-formatted weather forecast data from the National Weather Service A
 - The server uses standard HTTP (not HTTPS) on port 8080. For production deployment, use HTTPS via `http.ListenAndServeTLS()` or proxy through a web server.
 - The API relies on external data from the National Weather Service; ensure your application can reach `https://api.weather.gov`.
 
+## Production Readiness
+
+Given that this application is a demonstration for an interview, I would take the following steps to prepare this application for a production system:
+
+- ***Create comprehensive unit and integration tests***, especially within the NSW Api adapter
+- Enable HTTPS and add input validation for coordinates
+- Implement structured logging and monitoring/metrics collection
+- Add caching to reduce external API calls and improve response times
+- Move hardcoded values to environment variables
+- Containerize with Docker for consistent deployments
+- Add API documentation and deployment runbooks
+
 ## License
 
 This project's code is free to use for whatever purpose you see fit.
