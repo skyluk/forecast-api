@@ -45,7 +45,7 @@ func (w *weatherAdapter) GetForecast(point models.Point) (*models.SimpleForecast
 		return nil, err
 	}
 
-	resp, err := models.NewSimpleForecast(forecast)
+	resp, err := forecast.CreateSimpleForecast()
 	if err != nil {
 		return nil, fmt.Errorf("Error creating simple forecast: %v", err)
 	}

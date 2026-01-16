@@ -1,4 +1,4 @@
-# Weather API
+# Forecast API
 
 A lightweight Go-based REST API that provides weather forecast information by querying the National Weather Service API.
 

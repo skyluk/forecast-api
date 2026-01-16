@@ -1,5 +1,7 @@
 package models
 
+import "fmt"
+
 // Point represents a latitude/longitude coordinate
 type Point struct {
 	Latitude  float32
@@ -39,4 +41,26 @@ type WSErrorResponse struct {
 	Status   int    `json:"status"`
 	Detail   string `json:"detail"`
 	Instance string `json:"instance"`
+}
+
+func (fc *WSForecastResponse) CreateSimpleForecast() (*SimpleForecast, error) {
+	if fc == nil {
+		return nil, fmt.Errorf("forecast cannot be nil")
+	}
+
+	if len(fc.Properties.Periods) == 0 {
+		return nil, fmt.Errorf("no forecast periods present")
+	}
+
+	resp := SimpleForecast{}
+
+	for _, period := range fc.Properties.Periods {
+		if period.Num == 1 {
+			resp.Forecast = period.ShortForecast
+			resp.TempSummary = summarizeTemp(period.Temp)
+			break
+		}
+	}
+
+	return &resp, nil
 }
